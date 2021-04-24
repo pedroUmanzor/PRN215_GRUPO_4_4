@@ -19,7 +19,7 @@ public class frmClientes extends javax.swing.JFrame {
     //METODO CARGAR INTERFAZ
     public void CargarInterfaz(){
         String datos[][]={};
-        String columna[]= {"Nombre","Apellido","Direccion","Telefono"};
+        String columna[]= {"Nombre","Apellido","Direccion","Telefono", "DUI"};
         modelo= new DefaultTableModel(datos,columna);
         jTControlCliente.setModel(modelo);
     }
@@ -34,7 +34,7 @@ public class frmClientes extends javax.swing.JFrame {
             modelo.setValueAt(a.getApellido(),contador,1);
             modelo.setValueAt(a.getDireccion(),contador,2);
             modelo.setValueAt(a.getTelefono(),contador,3);
-
+            modelo.setValueAt(a.getDui(),contador,4);
         }
     }
 
@@ -90,11 +90,11 @@ public class frmClientes extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Nombre", "Apellido", "Direccion", "Telefono"
+                "Nombre", "Apellido", "Direccion", "Telefono", "DUI"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, true, false
+                false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {

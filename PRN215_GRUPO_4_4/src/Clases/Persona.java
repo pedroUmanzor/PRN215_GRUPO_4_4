@@ -17,14 +17,25 @@ public class Persona {
    private String Apellido;
    private String Direccion;
    private String Telefono;
+   private String Dui;
 
-    public Persona(String Nombre, String Apellido, String Direccion, String Telefono) {
+ 
+
+    public Persona(String Nombre, String Apellido, String Direccion, String Telefono, String Dui) {
         this.Nombre = Nombre;
         this.Apellido = Apellido;
         this.Direccion = Direccion;
         this.Telefono = Telefono;
+        this.Dui = Dui;
     }
    
+    public String getDui() {
+        return Dui;
+    }
+
+    public void setDui(String Dui) {
+        this.Dui = Dui;
+    }
 
     public String getNombre() {
         return Nombre;
