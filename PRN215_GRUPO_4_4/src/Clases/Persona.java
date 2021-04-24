@@ -6,6 +6,7 @@
 package Clases;
 
 import javax.swing.table.DefaultTableModel;
+import prn215_grupo_4_4.AgregarCliente;
 
 
 /**
@@ -67,5 +68,5 @@ public class Persona {
 
     public void setTelefono(String Telefono) {
         this.Telefono = Telefono;
-    } 
+    }
 }

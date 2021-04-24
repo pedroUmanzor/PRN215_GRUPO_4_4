@@ -2,6 +2,7 @@
 package prn215_grupo_4_4;
 
 import Clases.Persona;
+import java.awt.Color;
 import javax.swing.table.DefaultTableModel;
 
 
@@ -15,6 +16,7 @@ public class frmClientes extends javax.swing.JFrame {
         CargarDatos();
         //PONER LA VENTANA EN MEDIO DE LA PANTALLA
         this.setLocationRelativeTo(null);
+        
     }
     //METODO CARGAR INTERFAZ
     public void CargarInterfaz(){
@@ -55,6 +57,7 @@ public class frmClientes extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jTextField1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,7 +87,9 @@ public class frmClientes extends javax.swing.JFrame {
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
-        jTControlCliente.setForeground(new java.awt.Color(51, 153, 255));
+        jTControlCliente.setBackground(new java.awt.Color(44, 62, 80));
+        jTControlCliente.setFont(new java.awt.Font("Bodoni MT", 0, 12)); // NOI18N
+        jTControlCliente.setForeground(new java.awt.Color(255, 255, 255));
         jTControlCliente.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -106,6 +111,9 @@ public class frmClientes extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(44, 62, 80));
         jPanel3.setForeground(new java.awt.Color(44, 62, 80));
 
+        jBAgregarCliente.setBackground(new java.awt.Color(44, 62, 80));
+        jBAgregarCliente.setFont(new java.awt.Font("Bodoni MT", 1, 12)); // NOI18N
+        jBAgregarCliente.setForeground(new java.awt.Color(255, 255, 255));
         jBAgregarCliente.setText("Agregar cliente");
         jBAgregarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,10 +121,19 @@ public class frmClientes extends javax.swing.JFrame {
             }
         });
 
+        jBEliminarCliente.setBackground(new java.awt.Color(44, 62, 80));
+        jBEliminarCliente.setFont(new java.awt.Font("Bodoni MT", 1, 12)); // NOI18N
+        jBEliminarCliente.setForeground(new java.awt.Color(255, 255, 255));
         jBEliminarCliente.setText("Eliminar cliente");
 
+        jButton2.setBackground(new java.awt.Color(44, 62, 80));
+        jButton2.setFont(new java.awt.Font("Bodoni MT", 1, 12)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Menu Principal");
 
+        jBActualizarCliente.setBackground(new java.awt.Color(44, 62, 80));
+        jBActualizarCliente.setFont(new java.awt.Font("Bodoni MT", 1, 12)); // NOI18N
+        jBActualizarCliente.setForeground(new java.awt.Color(255, 255, 255));
         jBActualizarCliente.setText("Actualizar cliente");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -143,10 +160,23 @@ public class frmClientes extends javax.swing.JFrame {
                 .addComponent(jBEliminarCliente)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton2)
-                .addContainerGap(155, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/buscar.png"))); // NOI18N
+
+        jPanel4.setBackground(new java.awt.Color(44, 62, 80));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 45, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -164,6 +194,7 @@ public class frmClientes extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 526, Short.MAX_VALUE))
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -176,8 +207,10 @@ public class frmClientes extends javax.swing.JFrame {
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -197,7 +230,8 @@ public class frmClientes extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBAgregarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAgregarClienteActionPerformed
-       AgregarCliente Agregar = new AgregarCliente();
+        dispose();
+        AgregarCliente Agregar = new AgregarCliente();
        Agregar.setVisible(true);
 
     }//GEN-LAST:event_jBAgregarClienteActionPerformed
@@ -246,6 +280,7 @@ public class frmClientes extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTControlCliente;
     private javax.swing.JTextField jTextField1;
