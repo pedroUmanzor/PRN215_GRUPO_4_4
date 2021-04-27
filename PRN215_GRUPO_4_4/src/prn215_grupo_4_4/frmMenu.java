@@ -34,7 +34,12 @@ public class frmMenu extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         lblCerrar = new javax.swing.JLabel();
-        btnAdministrarUsuarios = new javax.swing.JButton();
+        lblUsuarios1 = new javax.swing.JLabel();
+        lblCategorias = new javax.swing.JLabel();
+        lblFacturar = new javax.swing.JLabel();
+        lblProductos = new javax.swing.JLabel();
+        lblClientes = new javax.swing.JLabel();
+        lblEmpleados = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
 
         jRadioButton1.setText("jRadioButton1");
@@ -57,14 +62,44 @@ public class frmMenu extends javax.swing.JFrame {
             }
         });
 
-        btnAdministrarUsuarios.setBackground(new java.awt.Color(41, 128, 185));
-        btnAdministrarUsuarios.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnAdministrarUsuarios.setForeground(new java.awt.Color(255, 255, 255));
-        btnAdministrarUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/administrarUsuarios.png"))); // NOI18N
-        btnAdministrarUsuarios.setText("Administrar Usaurios");
-        btnAdministrarUsuarios.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAdministrarUsuariosActionPerformed(evt);
+        lblUsuarios1.setBackground(new java.awt.Color(102, 102, 102));
+        lblUsuarios1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblUsuarios1.setForeground(new java.awt.Color(255, 255, 255));
+        lblUsuarios1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Usuarios.png"))); // NOI18N
+        lblUsuarios1.setText("Usuarios");
+
+        lblCategorias.setBackground(new java.awt.Color(102, 102, 102));
+        lblCategorias.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblCategorias.setForeground(new java.awt.Color(255, 255, 255));
+        lblCategorias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Categorias.png"))); // NOI18N
+        lblCategorias.setText("Categorias");
+
+        lblFacturar.setBackground(new java.awt.Color(102, 102, 102));
+        lblFacturar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblFacturar.setForeground(new java.awt.Color(255, 255, 255));
+        lblFacturar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Facturar.png"))); // NOI18N
+        lblFacturar.setText("Facturar");
+
+        lblProductos.setBackground(new java.awt.Color(102, 102, 102));
+        lblProductos.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblProductos.setForeground(new java.awt.Color(255, 255, 255));
+        lblProductos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Productos.png"))); // NOI18N
+        lblProductos.setText("Productos");
+
+        lblClientes.setBackground(new java.awt.Color(102, 102, 102));
+        lblClientes.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblClientes.setForeground(new java.awt.Color(255, 255, 255));
+        lblClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Cliente.png"))); // NOI18N
+        lblClientes.setText("Clientes");
+
+        lblEmpleados.setBackground(new java.awt.Color(102, 102, 102));
+        lblEmpleados.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblEmpleados.setForeground(new java.awt.Color(255, 255, 255));
+        lblEmpleados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Empleados.png"))); // NOI18N
+        lblEmpleados.setText("Empleados");
+        lblEmpleados.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblEmpleadosMouseClicked(evt);
             }
         });
 
@@ -72,23 +107,43 @@ public class frmMenu extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnAdministrarUsuarios)
-                .addGap(63, 63, 63)
-                .addComponent(lblCerrar)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(lblFacturar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblClientes))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(lblCerrar))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblProductos)
+                            .addComponent(lblUsuarios1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblCategorias)
+                            .addComponent(lblEmpleados))))
+                .addGap(31, 31, 31))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(lblCerrar))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(btnAdministrarUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap()
+                .addComponent(lblCerrar)
+                .addGap(23, 23, 23)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblUsuarios1)
+                    .addComponent(lblEmpleados))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblProductos)
+                    .addComponent(lblCategorias))
+                .addGap(11, 11, 11)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblFacturar)
+                    .addComponent(lblClientes))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -101,27 +156,24 @@ public class frmMenu extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel7)
-                .addGap(10, 10, 10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(225, 225, 225))
+                .addGap(180, 180, 180))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(110, 110, 110)
                 .addComponent(jLabel7)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(107, Short.MAX_VALUE))
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 597, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 734, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,10 +190,12 @@ public class frmMenu extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_lblCerrarMouseClicked
 
-    private void btnAdministrarUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdministrarUsuariosActionPerformed
+    private void lblEmpleadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblEmpleadosMouseClicked
         // TODO add your handling code here:
-      
-    }//GEN-LAST:event_btnAdministrarUsuariosActionPerformed
+        dispose();
+        frmEmpleados empleados = new frmEmpleados();
+        empleados.setVisible(true);
+    }//GEN-LAST:event_lblEmpleadosMouseClicked
 
     /**
      * @param args the command line arguments
@@ -182,11 +236,16 @@ public class frmMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAdministrarUsuarios;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JLabel lblCategorias;
     private javax.swing.JLabel lblCerrar;
+    private javax.swing.JLabel lblClientes;
+    private javax.swing.JLabel lblEmpleados;
+    private javax.swing.JLabel lblFacturar;
+    private javax.swing.JLabel lblProductos;
+    private javax.swing.JLabel lblUsuarios1;
     // End of variables declaration//GEN-END:variables
 }
