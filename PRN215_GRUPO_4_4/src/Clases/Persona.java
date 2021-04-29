@@ -20,7 +20,10 @@ public class Persona {
    private String Telefono;
    private String Dui;
 
- 
+    public Persona() {
+    }
+
+
 
     public Persona(String Nombre, String Apellido, String Direccion, String Telefono, String Dui) {
         this.Nombre = Nombre;
