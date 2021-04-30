@@ -5,6 +5,9 @@
  */
 package prn215_grupo_4_4;
 
+import Clases.Usuario;
+import java.util.ArrayList;
+import java.util.LinkedList;
 import javax.swing.JOptionPane;
 
 /**
@@ -12,13 +15,36 @@ import javax.swing.JOptionPane;
  * @author angel
  */
 public class frmLogin extends javax.swing.JFrame {
-
+    
+//     //PERMITE INSERTAR ELEMENTOS EN TIEMPO CONSTANTE
+//    public static LinkedList contenedor = new LinkedList();
+//    int contador=0;
+//    int fila;
+//    
+//     public void CargarDatos(){
+//        
+//       
+//        Usuario e;
+//        for (int i = 0; i < frmUsuarios.contenedor.size(); i++) {
+//            e=(Empleado)frmAgregarEmpleado.contenedor.get(i);
+//            modelo.insertRow(contador,new Object[]{} );
+//            modelo.setValueAt("EMP"+e.getIdEmpleado(),contador,0);
+//            modelo.setValueAt(e.getNombre(),contador,1);
+//            modelo.setValueAt(e.getApellido(),contador,2);
+//            modelo.setValueAt(e.getCargo(),contador,3);
+//            
+//            
+//        }
     /**
      * Creates new form frmLogin
      */
+    public static ArrayList<Usuario> us = new ArrayList<Usuario>();
     public frmLogin() {
         initComponents();
-        
+       this.setLocationRelativeTo(null);
+       
+       
+       
     }
 
     /**
@@ -206,16 +232,31 @@ public class frmLogin extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        if(!txtUsuario.getText().isEmpty() && !txtContraseña.getText().isEmpty())
+        
+        if(txtUsuario.getText().equals("") && txtContraseña.getPassword().equals(""))
         {
-            JOptionPane.showMessageDialog(null, "Bienvenido");
-            frmMenu registrarUsuario = new frmMenu();
-            this.hide();
-            registrarUsuario.show();
+            JOptionPane.showMessageDialog(null, "Los campos no deben estar vacíos");
+
         }
         else
         {
-            JOptionPane.showMessageDialog(null, "Los campos no deben estar vacíos");
+            String pass = "";
+        char [] password = txtContraseña.getPassword();
+        for(int i =0; i < password.length; i++)
+        {
+            pass+=password[i];
+        }
+            if(txtUsuario.getText().equals("root")&& pass.equals("root"))
+            {
+                JOptionPane.showMessageDialog(null, "Bienvenido");
+            frmMenu menu = new frmMenu();
+            dispose();
+            menu.setVisible(true);
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null, "Usuario no valido");
+            }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

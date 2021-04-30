@@ -9,11 +9,12 @@ package Clases;
  * @author angel
  */
 public class Empleado extends Persona {
+    public static int id = 1;
     private String cargo;
-    private int idEmpleado=0;
+    private int idEmpleado;
     
         public Empleado() {
-        idEmpleado = idEmpleado++;
+        idEmpleado = Empleado.id++;
     }
         
         public Empleado(String cargo, int idEmpleado, String Nombre, String Apellido, String Direccion, String Telefono, String Dui) {

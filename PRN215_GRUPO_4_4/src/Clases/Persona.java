@@ -72,4 +72,12 @@ public class Persona {
     public void setTelefono(String Telefono) {
         this.Telefono = Telefono;
     }
+    
+    public void eliminar(){
+        Nombre= "";
+        Apellido= "";
+        Direccion= "";
+        Telefono= "";
+        Dui= "";
+    }
 }

@@ -2,6 +2,7 @@
 package prn215_grupo_4_4;
 
 
+import Clases.Cliente;
 import Clases.Persona;
 import java.util.LinkedList;
 import javax.swing.JOptionPane;
@@ -76,6 +77,11 @@ public class AgregarCliente extends javax.swing.JFrame {
 
         jLabel5.setText("Telefono:");
 
+        jTNombreCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTNombreClienteActionPerformed(evt);
+            }
+        });
         jTNombreCliente.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTNombreClienteKeyTyped(evt);
@@ -265,8 +271,8 @@ public class AgregarCliente extends javax.swing.JFrame {
             String Dui= jTDui.getText();
             
             //NOMBRE DE LA CLASE: "Persona" CON SUS ATRIBUTOS
-            Persona Cliente = new Persona(Nombre,Apellido, Direccion,Telefono, Dui);
-            contenedor.add(Cliente);
+            Cliente clientes = new Cliente(Nombre,Apellido, Direccion,Telefono, Dui);
+            contenedor.add(clientes);
             //LIMPIAMOS LOS CAMPOS.
             jTNombreCliente.setText("");
             jTApellidos1.setText("");
@@ -332,6 +338,10 @@ public class AgregarCliente extends javax.swing.JFrame {
             jTDui.setText("");
             jTNombreCliente.requestFocus();
     }//GEN-LAST:event_jBLimpiarActionPerformed
+
+    private void jTNombreClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTNombreClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTNombreClienteActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
