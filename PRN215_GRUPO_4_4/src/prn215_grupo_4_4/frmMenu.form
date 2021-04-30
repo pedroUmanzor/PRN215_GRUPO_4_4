@@ -177,6 +177,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Usuarios"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblUsuarios1MouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="lblCategorias">
               <Properties>
@@ -228,6 +231,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Productos"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblProductosMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="lblClientes">
               <Properties>
@@ -245,6 +251,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Clientes"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblClientesMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="lblEmpleados">
               <Properties>
