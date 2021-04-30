@@ -67,6 +67,11 @@ public class frmMenu extends javax.swing.JFrame {
         lblUsuarios1.setForeground(new java.awt.Color(255, 255, 255));
         lblUsuarios1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Usuarios.png"))); // NOI18N
         lblUsuarios1.setText("Usuarios");
+        lblUsuarios1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblUsuarios1MouseClicked(evt);
+            }
+        });
 
         lblCategorias.setBackground(new java.awt.Color(102, 102, 102));
         lblCategorias.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -85,12 +90,22 @@ public class frmMenu extends javax.swing.JFrame {
         lblProductos.setForeground(new java.awt.Color(255, 255, 255));
         lblProductos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Productos.png"))); // NOI18N
         lblProductos.setText("Productos");
+        lblProductos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblProductosMouseClicked(evt);
+            }
+        });
 
         lblClientes.setBackground(new java.awt.Color(102, 102, 102));
         lblClientes.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblClientes.setForeground(new java.awt.Color(255, 255, 255));
         lblClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Cliente.png"))); // NOI18N
         lblClientes.setText("Clientes");
+        lblClientes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblClientesMouseClicked(evt);
+            }
+        });
 
         lblEmpleados.setBackground(new java.awt.Color(102, 102, 102));
         lblEmpleados.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -196,6 +211,28 @@ public class frmMenu extends javax.swing.JFrame {
         frmEmpleados empleados = new frmEmpleados();
         empleados.setVisible(true);
     }//GEN-LAST:event_lblEmpleadosMouseClicked
+
+    private void lblUsuarios1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblUsuarios1MouseClicked
+        // TODO add your handling code here:
+        frmUsuarios usuarios = new frmUsuarios();
+        dispose();
+        usuarios.setVisible(true);
+    }//GEN-LAST:event_lblUsuarios1MouseClicked
+
+    private void lblClientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblClientesMouseClicked
+        // TODO add your handling code here:
+        frmClientes clientes = new frmClientes();
+        dispose();
+        clientes.setVisible(true);
+
+    }//GEN-LAST:event_lblClientesMouseClicked
+
+    private void lblProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblProductosMouseClicked
+        // TODO add your handling code here:
+        frmProductos productos = new frmProductos();
+        dispose();
+        productos.setVisible(true);
+    }//GEN-LAST:event_lblProductosMouseClicked
 
     /**
      * @param args the command line arguments
