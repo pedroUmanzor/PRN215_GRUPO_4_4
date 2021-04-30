@@ -3,6 +3,7 @@ package Clases;
 
 
 public class Producto {
+    public int idProducto=0;
     private String nombre;
     private String marca;
     private String modelo;
@@ -12,7 +13,19 @@ public class Producto {
     private float costo;
     private String estado;
     private float precioVenta;
+    
+    public Producto(){
+        idProducto=idProducto++;
+    }
+   
+    public int getIdProducto() {
+        return idProducto;
+    }
 
+    public void setIdProducto(int idProducto) {
+        this.idProducto = idProducto;
+    }
+    
     public String getNombre() {
         return nombre;
     }
@@ -76,9 +89,7 @@ public class Producto {
     public void setPrecioVenta(float precioVenta) {
         this.precioVenta = precioVenta;
     }
-
- 
-
+    
     
     
 }

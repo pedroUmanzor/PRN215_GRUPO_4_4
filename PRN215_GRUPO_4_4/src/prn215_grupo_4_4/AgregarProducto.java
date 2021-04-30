@@ -20,7 +20,7 @@ public class AgregarProducto extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
                 //LLenar combobox
         jCBEstado.addItem("Disponible");
-        jCBEstado.addItem("Encargado");
+        jCBEstado.addItem("Vendido");
     }
 
     @SuppressWarnings("unchecked")
@@ -39,7 +39,6 @@ public class AgregarProducto extends javax.swing.JFrame {
         jTPrecioVenta = new javax.swing.JTextField();
         jTModelo = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jTCaracteristicas = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jBListo = new javax.swing.JButton();
         jBCancelar = new javax.swing.JButton();
@@ -53,6 +52,8 @@ public class AgregarProducto extends javax.swing.JFrame {
         jTMarca = new javax.swing.JTextField();
         jCBCategorias = new javax.swing.JComboBox<>();
         jCBEstado = new javax.swing.JComboBox<>();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTACaracteristicas = new javax.swing.JTextArea();
 
         jLabel6.setText("jLabel6");
 
@@ -136,12 +137,6 @@ public class AgregarProducto extends javax.swing.JFrame {
 
         jLabel7.setText("caracterisiticas:");
 
-        jTCaracteristicas.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTCaracteristicasKeyTyped(evt);
-            }
-        });
-
         jPanel2.setBackground(new java.awt.Color(51, 110, 123));
 
         jBListo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cheque.png"))); // NOI18N
@@ -193,7 +188,7 @@ public class AgregarProducto extends javax.swing.JFrame {
                 .addComponent(jBLimpiar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jBMostrarDatos)
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -239,6 +234,10 @@ public class AgregarProducto extends javax.swing.JFrame {
             }
         });
 
+        jTACaracteristicas.setColumns(20);
+        jTACaracteristicas.setRows(5);
+        jScrollPane2.setViewportView(jTACaracteristicas);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -257,18 +256,20 @@ public class AgregarProducto extends javax.swing.JFrame {
                     .addComponent(jLabel8)
                     .addComponent(jLabel7)
                     .addComponent(jLabel10))
-                .addGap(18, 18, 18)
+                .addGap(8, 8, 8)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jTCosto, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTSerie, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
-                        .addComponent(jTModelo)
-                        .addComponent(jTNombreProducto)
-                        .addComponent(jTCaracteristicas)
-                        .addComponent(jTMarca)
-                        .addComponent(jCBCategorias, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jTPrecioVenta, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
-                    .addComponent(jCBEstado, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jCBEstado, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTCosto, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jCBCategorias, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTNombreProducto)
+                            .addComponent(jTMarca)
+                            .addComponent(jTModelo, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jTSerie, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jTPrecioVenta))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -291,27 +292,27 @@ public class AgregarProducto extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel5)
                     .addComponent(jTSerie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jCBCategorias, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTCaracteristicas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jTCosto, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel8)
-                    .addComponent(jCBCategorias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jCBEstado, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTCosto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jTPrecioVenta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(jCBEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTPrecioVenta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11))
-                .addGap(18, 18, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -319,23 +320,22 @@ public class AgregarProducto extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTSerieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTSerieActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTSerieActionPerformed
 
     private void jTPrecioVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTPrecioVentaActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTPrecioVentaActionPerformed
 
     private void jTModeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTModeloActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTModeloActionPerformed
 
     private void jBListoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBListoActionPerformed
-        // TODO add your handling code here:
 
         try{
         if (jTNombreProducto.getText().isEmpty() || jTPrecioVenta.getText().isEmpty()
-            || jTModelo.getText().isEmpty() || jTSerie.getText().isEmpty() || jTCaracteristicas.getText().isEmpty() ) {
+            || jTModelo.getText().isEmpty() || jTSerie.getText().isEmpty() || jTACaracteristicas.getText().isEmpty() ) {
             JOptionPane.showMessageDialog(rootPane, "No dejes vacio los campos");
         }
         else{
@@ -346,31 +346,36 @@ public class AgregarProducto extends javax.swing.JFrame {
             producto.setMarca(String.valueOf(jTMarca.getText())); 
             producto.setModelo(String.valueOf(jTModelo.getText())); 
             producto.setNumeroSerie(String.valueOf(jTSerie.getText()));
-            producto.setCaracteristicas(String.valueOf(jTCaracteristicas.getText()));
+            producto.setCaracteristicas(String.valueOf(jTACaracteristicas.getText()));
             producto.setCosto(Float.valueOf(jTCosto.getText()));
             producto.setEstado(String.valueOf(jCBEstado.getSelectedItem()));
             producto.setPrecioVenta(Float.valueOf(jTPrecioVenta.getText()));
-            contenedor.add(producto);
+            //VALIDAMOS QUE EL COSTO Y EL PRECIO VENTA SEAN POSITIVOS
+            if (producto.getCosto()<=0 || producto.getPrecioVenta()<=0) {
+                JOptionPane.showMessageDialog(rootPane, "Datos Errones,Ingrese valores positivos"+" "+
+                                               "en el costo y en el precio venta");
+            }else{
+            contenedor.add(producto);           
             //LIMPIAMOS LOS CAMPOS.
+            jTMarca.setText("");
             jTNombreProducto.setText("");
             jTPrecioVenta.setText("");
             jTModelo.setText("");
             jTSerie.setText("");
-            jTCaracteristicas.setText("");
+            jTACaracteristicas.setText("");
+            jTCosto.setText("");
             JOptionPane.showMessageDialog(rootPane, "Datos ingresados correctamente");
             jTNombreProducto.requestFocus();
+            }
+ 
         }  
         }catch(NumberFormatException excepcion){
             JOptionPane.showMessageDialog(rootPane, "Datos no Errones, para el costo y el precio venta ingrese numericos");
         }
-        
-
     }//GEN-LAST:event_jBListoActionPerformed
 
     private void jBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCancelarActionPerformed
-        dispose();
-
-        
+        dispose();      
     }//GEN-LAST:event_jBCancelarActionPerformed
 
     private void jBMostrarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMostrarDatosActionPerformed
@@ -380,32 +385,15 @@ public class AgregarProducto extends javax.swing.JFrame {
     }//GEN-LAST:event_jBMostrarDatosActionPerformed
 
     private void jTSerieKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTSerieKeyTyped
-           //en este caso pueden ingresar datos numericos y caracteres
+  
     }//GEN-LAST:event_jTSerieKeyTyped
 
-    private void jTCaracteristicasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCaracteristicasKeyTyped
-
-//        char c=evt.getKeyChar();
-//        if ((c<'a' || c>'z') && (c<'A' || c>'Z') ) {
-//            evt.consume();
-//            JOptionPane.showMessageDialog(rootPane, "Ingrese solo caracteres");
-//        }
-    }//GEN-LAST:event_jTCaracteristicasKeyTyped
-
     private void jTNombreProductoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTNombreProductoKeyTyped
-//        char c=evt.getKeyChar();
-//        if ((c<'a' || c>'z') && (c<'A' || c>'Z') ) {
-//            evt.consume();
-//            JOptionPane.showMessageDialog(rootPane, "Ingrese solo caracteres");
-//        }
+
     }//GEN-LAST:event_jTNombreProductoKeyTyped
 
     private void jTPrecioVentaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTPrecioVentaKeyTyped
-//       char c=evt.getKeyChar();
-//        if (c<'0' || c>'9') {
-//            evt.consume();
-//            JOptionPane.showMessageDialog(rootPane, "Ingrese datos numericos");
-//        }
+
     }//GEN-LAST:event_jTPrecioVentaKeyTyped
 
     private void jBLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBLimpiarActionPerformed
@@ -414,44 +402,32 @@ public class AgregarProducto extends javax.swing.JFrame {
             jTPrecioVenta.setText("");
             jTModelo.setText("");
             jTSerie.setText("");
-            jTCaracteristicas.setText("");
+            jTACaracteristicas.setText("");
             jTNombreProducto.requestFocus();
     }//GEN-LAST:event_jBLimpiarActionPerformed
 
     private void jTNombreProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTNombreProductoActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTNombreProductoActionPerformed
 
     private void jTCostoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTCostoActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTCostoActionPerformed
 
     private void jTCostoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCostoKeyTyped
-        char c=evt.getKeyChar();
-//        if (c<'0' || c>'9') {
-//            evt.consume();
-//            JOptionPane.showMessageDialog(rootPane, "Ingrese datos numericos");
-//        }
+ 
     }//GEN-LAST:event_jTCostoKeyTyped
 
     private void jTMarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTMarcaActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jTMarcaActionPerformed
 
     private void jTMarcaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTMarcaKeyTyped
-//        char c=evt.getKeyChar();
-//        if ((c<'a' || c>'z') && (c<'A' || c>'Z') ) {
-//            evt.consume();
-//            JOptionPane.showMessageDialog(rootPane, "Ingrese solo caracteres");
-//        }
+
     }//GEN-LAST:event_jTMarcaKeyTyped
 
     private void jTModeloKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTModeloKeyTyped
-//        char c=evt.getKeyChar();
-//        if ((c<'a' || c>'z') && (c<'A' || c>'Z') ) {
-//            evt.consume();
-//            JOptionPane.showMessageDialog(rootPane, "Ingrese solo caracteres");
-//        }
+
     }//GEN-LAST:event_jTModeloKeyTyped
 
     public static void main(String args[]) {
@@ -507,7 +483,8 @@ public class AgregarProducto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTCaracteristicas;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTACaracteristicas;
     private javax.swing.JTextField jTCosto;
     private javax.swing.JTextField jTMarca;
     private javax.swing.JTextField jTModelo;

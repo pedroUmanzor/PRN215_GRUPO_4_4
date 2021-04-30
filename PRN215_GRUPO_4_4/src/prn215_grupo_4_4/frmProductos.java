@@ -26,7 +26,7 @@ public class frmProductos extends javax.swing.JFrame {
     //METODO CARGAR INTERFAZ
     public void CargarInterfaz(){
         String datos[][]={};
-        String columna[]= {"Nombre","Marca","Modelo","N.serie","Caracteristicas", "Categoria","Costo","estado","Precio venta"};
+        String columna[]= {"Codigo","Nombre","Marca","Modelo","N.serie","Caracteristicas", "Categoria","Costo","estado","Precio venta"};
         modelo= new DefaultTableModel(datos,columna);
         jTControlProductos.setModel(modelo);
     }
@@ -37,14 +37,15 @@ public class frmProductos extends javax.swing.JFrame {
         for (int i = 0; i < AgregarProducto.contenedor.size(); i++) {
             a=(Producto)AgregarProducto.contenedor.get(i);
             modelo.insertRow(contador,new Object[]{} );
-            modelo.setValueAt(a.getNombre(),contador,0);
-            modelo.setValueAt(a.getMarca(),contador,1);
-            modelo.setValueAt(a.getModelo(),contador,2);
-            modelo.setValueAt(a.getNumeroSerie(),contador,3);
-            modelo.setValueAt(a.getCaracteristicas(),contador,4);
-            modelo.setValueAt(a.getCosto(),contador,6);
-            modelo.setValueAt(a.getEstado(),contador,7);
-            modelo.setValueAt(a.getPrecioVenta(),contador,8);
+            modelo.setValueAt(a.idProducto,contador,0);
+            modelo.setValueAt(a.getNombre(),contador,1);
+            modelo.setValueAt(a.getMarca(),contador,2);
+            modelo.setValueAt(a.getModelo(),contador,3);
+            modelo.setValueAt(a.getNumeroSerie(),contador,4);
+            modelo.setValueAt(a.getCaracteristicas(),contador,5);
+            modelo.setValueAt(a.getCosto(),contador,7);
+            modelo.setValueAt(a.getEstado(),contador,8);
+            modelo.setValueAt(a.getPrecioVenta(),contador,9);
         }
           
 
@@ -105,11 +106,11 @@ public class frmProductos extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Nombre", " Marca", "Modelo", "N. serie", "Caracterisitcas", "Categoria", "Costo", "Estado", "Precio venta"
+                "Codigo", "Nombre", " Marca", "Modelo", "N. serie", "Caracterisitcas", "Categoria", "Costo", "Estado", "Precio venta"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -118,8 +119,8 @@ public class frmProductos extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTControlProductos);
         if (jTControlProductos.getColumnModel().getColumnCount() > 0) {
-            jTControlProductos.getColumnModel().getColumn(3).setResizable(false);
-            jTControlProductos.getColumnModel().getColumn(5).setResizable(false);
+            jTControlProductos.getColumnModel().getColumn(4).setResizable(false);
+            jTControlProductos.getColumnModel().getColumn(6).setResizable(false);
         }
 
         jPanel3.setBackground(new java.awt.Color(44, 62, 80));
@@ -213,7 +214,8 @@ public class frmProductos extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 651, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 718, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
             .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
@@ -237,7 +239,7 @@ public class frmProductos extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );

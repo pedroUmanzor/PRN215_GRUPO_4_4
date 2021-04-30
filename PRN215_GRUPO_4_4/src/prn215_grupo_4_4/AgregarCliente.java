@@ -247,19 +247,19 @@ public class AgregarCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTTelefonoActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTTelefonoActionPerformed
 
     private void jTApellidos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTApellidos1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTApellidos1ActionPerformed
 
     private void jTDireccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTDireccionActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTDireccionActionPerformed
 
     private void jBListoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBListoActionPerformed
-        // TODO add your handling code here:
+
         if (jTNombreCliente.getText().isEmpty() || jTApellidos1.getText().isEmpty() || jTDireccion.getText().isEmpty() || jTTelefono.getText().isEmpty() || jTDui.getText().isEmpty() ) {
             JOptionPane.showMessageDialog(rootPane, "No dejes vacio los campos");
         }
@@ -285,9 +285,7 @@ public class AgregarCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jBListoActionPerformed
 
     private void jBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCancelarActionPerformed
-        dispose();
-
-        
+        dispose();        
     }//GEN-LAST:event_jBCancelarActionPerformed
 
     private void jBMostrarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMostrarDatosActionPerformed
@@ -314,19 +312,11 @@ public class AgregarCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jTDuiKeyTyped
 
     private void jTNombreClienteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTNombreClienteKeyTyped
-        char c=evt.getKeyChar();
-        if ((c<'a' || c>'z') && (c<'A' || c>'Z') ) {
-            evt.consume();
-            JOptionPane.showMessageDialog(rootPane, "Ingrese solo caracteres");
-        }
+      
     }//GEN-LAST:event_jTNombreClienteKeyTyped
 
     private void jTApellidos1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTApellidos1KeyTyped
-        char c=evt.getKeyChar();
-        if ((c<'a' || c>'z') && (c<'A' || c>'Z') ) {
-            evt.consume();
-            JOptionPane.showMessageDialog(rootPane, "Ingrese solo caracteres");
-        }
+
     }//GEN-LAST:event_jTApellidos1KeyTyped
 
     private void jBLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBLimpiarActionPerformed
@@ -340,7 +330,7 @@ public class AgregarCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jBLimpiarActionPerformed
 
     private void jTNombreClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTNombreClienteActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTNombreClienteActionPerformed
 
     public static void main(String args[]) {
