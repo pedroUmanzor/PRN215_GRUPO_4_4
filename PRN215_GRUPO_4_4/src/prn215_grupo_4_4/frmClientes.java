@@ -25,7 +25,7 @@ public class frmClientes extends javax.swing.JFrame {
     //METODO CARGAR INTERFAZ
     public void CargarInterfaz(){
         String datos[][]={};
-        String columna[]= {"Nombre","Apellido","Direccion","Telefono", "DUI"};
+        String columna[]= {"Codigo","Nombre","Apellido","Direccion","Telefono", "DUI"};
         modelo= new DefaultTableModel(datos,columna);
         jTControlCliente.setModel(modelo);
     }
@@ -36,11 +36,12 @@ public class frmClientes extends javax.swing.JFrame {
         for (int i = 0; i < AgregarCliente.contenedor.size(); i++) {
             a=(Cliente)AgregarCliente.contenedor.get(i);
             modelo.insertRow(contador,new Object[]{} );
-            modelo.setValueAt(a.getNombre(),contador,0);
-            modelo.setValueAt(a.getApellido(),contador,1);
-            modelo.setValueAt(a.getDireccion(),contador,2);
-            modelo.setValueAt(a.getTelefono(),contador,3);
-            modelo.setValueAt(a.getDui(),contador,4);
+            modelo.setValueAt("CLIE"+a.getIdCliente(),contador, 0);
+            modelo.setValueAt(a.getNombre(),contador,1);
+            modelo.setValueAt(a.getApellido(),contador,2);
+            modelo.setValueAt(a.getDireccion(),contador,3);
+            modelo.setValueAt(a.getTelefono(),contador,4);
+            modelo.setValueAt(a.getDui(),contador,5);
         }
           
 

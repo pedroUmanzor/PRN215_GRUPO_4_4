@@ -3,21 +3,31 @@ package Clases;
 
 
 public class Producto {
-    public int idProducto=0;
+    public static int id=1;
+    private int idProducto;
     private String nombre;
     private String marca;
     private String modelo;
     private String numeroSerie;
     private String caracteristicas;
     //AQUI IRA UNA VARIABLE DE TIPO CATEGORIA
+    public Categorias NC;
+
+    public Categorias getNC() {
+        return NC;
+    }
+
+    public void setNC(Categorias NC) {
+        this.NC = NC;
+    }
     private float costo;
     private String estado;
     private float precioVenta;
     
     public Producto(){
-        idProducto=idProducto++;
+        idProducto=Producto.id++;
     }
-   
+
     public int getIdProducto() {
         return idProducto;
     }
@@ -89,7 +99,5 @@ public class Producto {
     public void setPrecioVenta(float precioVenta) {
         this.precioVenta = precioVenta;
     }
-    
-    
-    
+
 }

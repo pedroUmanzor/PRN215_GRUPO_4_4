@@ -2,18 +2,20 @@
 package prn215_grupo_4_4;
 
 
+import Clases.Categorias;
 import Clases.Cliente;
 import Clases.Persona;
 import Clases.Producto;
 import java.util.LinkedList;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 
 public class AgregarProducto extends javax.swing.JFrame {
 
     //PERMITE INSERTAR ELEMENTOS EN TIEMPO CONSTANTE
     public static LinkedList contenedor = new LinkedList();
-    
+
     public AgregarProducto() {
         initComponents();
         //PONER LA VENTANA EN MEDIO DE LA PANTALLA
@@ -22,7 +24,9 @@ public class AgregarProducto extends javax.swing.JFrame {
         jCBEstado.addItem("Disponible");
         jCBEstado.addItem("Vendido");
     }
+  
 
+     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -234,6 +238,12 @@ public class AgregarProducto extends javax.swing.JFrame {
             }
         });
 
+        jCBCategorias.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jCBCategoriasMouseClicked(evt);
+            }
+        });
+
         jTACaracteristicas.setColumns(20);
         jTACaracteristicas.setRows(5);
         jScrollPane2.setViewportView(jTACaracteristicas);
@@ -355,7 +365,7 @@ public class AgregarProducto extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(rootPane, "Datos Errones,Ingrese valores positivos"+" "+
                                                "en el costo y en el precio venta");
             }else{
-            contenedor.add(producto);           
+            contenedor.add(producto);         
             //LIMPIAMOS LOS CAMPOS.
             jTMarca.setText("");
             jTNombreProducto.setText("");
@@ -367,6 +377,7 @@ public class AgregarProducto extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Datos ingresados correctamente");
             jTNombreProducto.requestFocus();
             }
+            
  
         }  
         }catch(NumberFormatException excepcion){
@@ -430,6 +441,11 @@ public class AgregarProducto extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jTModeloKeyTyped
 
+    private void jCBCategoriasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCBCategoriasMouseClicked
+        Producto producto = new Producto();
+        
+    }//GEN-LAST:event_jCBCategoriasMouseClicked
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -468,7 +484,7 @@ public class AgregarProducto extends javax.swing.JFrame {
     private javax.swing.JButton jBLimpiar;
     private javax.swing.JButton jBListo;
     private javax.swing.JButton jBMostrarDatos;
-    private javax.swing.JComboBox<String> jCBCategorias;
+    public static javax.swing.JComboBox<String> jCBCategorias;
     private javax.swing.JComboBox<String> jCBEstado;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

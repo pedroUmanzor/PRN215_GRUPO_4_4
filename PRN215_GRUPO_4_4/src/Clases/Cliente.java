@@ -7,7 +7,25 @@ package Clases;
 
 
 public class Cliente extends Persona{
-    public Cliente(String Nombre, String Apellido, String Direccion, String Telefono, String Dui){
-        super(Nombre,Apellido,Direccion,Telefono,Dui);
+    public static int id=1;
+    private int idCliente;
+
+    
+       public Cliente(){
+        idCliente=Cliente.id++;
     }
+      
+    public Cliente(int idCliente,String Nombre, String Apellido, String Direccion, String Telefono, String Dui){
+        super(Nombre,Apellido,Direccion,Telefono,Dui);
+        this.idCliente=idCliente;
+    }
+       public int getIdCliente() {
+        return idCliente;
+    }
+
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
+    }
+    
+    
 }

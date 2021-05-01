@@ -37,7 +37,7 @@ public class frmProductos extends javax.swing.JFrame {
         for (int i = 0; i < AgregarProducto.contenedor.size(); i++) {
             a=(Producto)AgregarProducto.contenedor.get(i);
             modelo.insertRow(contador,new Object[]{} );
-            modelo.setValueAt(a.idProducto,contador,0);
+            modelo.setValueAt("PROD"+a.getIdProducto(),contador,0);
             modelo.setValueAt(a.getNombre(),contador,1);
             modelo.setValueAt(a.getMarca(),contador,2);
             modelo.setValueAt(a.getModelo(),contador,3);

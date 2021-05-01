@@ -4,6 +4,7 @@ package prn215_grupo_4_4;
 
 import Clases.Cliente;
 import Clases.Persona;
+import Clases.Producto;
 import java.util.LinkedList;
 import javax.swing.JOptionPane;
 
@@ -264,14 +265,15 @@ public class AgregarCliente extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "No dejes vacio los campos");
         }
         else{
-            String Nombre= jTNombreCliente.getText();
-            String Apellido= jTApellidos1.getText();
-            String Direccion= jTDireccion.getText();
-            String Telefono = jTTelefono.getText();
-            String Dui= jTDui.getText();
+             Cliente clientes = new Cliente();     
+            clientes.setNombre(String.valueOf(jTNombreCliente.getText()));
+            clientes.setApellido(String.valueOf(jTApellidos1.getText())); 
+            clientes.setDireccion(String.valueOf(jTDireccion.getText())); 
+            clientes.setTelefono(String.valueOf(jTTelefono.getText()));
+            clientes.setDui(String.valueOf(jTDui.getText()));
             
-            //NOMBRE DE LA CLASE: "Persona" CON SUS ATRIBUTOS
-            Cliente clientes = new Cliente(Nombre,Apellido, Direccion,Telefono, Dui);
+            //NOMBRE DE LA CLASE: "Cliente" CON SUS ATRIBUTOS
+
             contenedor.add(clientes);
             //LIMPIAMOS LOS CAMPOS.
             jTNombreCliente.setText("");

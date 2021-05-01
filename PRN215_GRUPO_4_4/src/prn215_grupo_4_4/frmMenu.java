@@ -78,6 +78,11 @@ public class frmMenu extends javax.swing.JFrame {
         lblCategorias.setForeground(new java.awt.Color(255, 255, 255));
         lblCategorias.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Categorias.png"))); // NOI18N
         lblCategorias.setText("Categorias");
+        lblCategorias.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblCategoriasMouseClicked(evt);
+            }
+        });
 
         lblFacturar.setBackground(new java.awt.Color(102, 102, 102));
         lblFacturar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -233,6 +238,11 @@ public class frmMenu extends javax.swing.JFrame {
         dispose();
         productos.setVisible(true);
     }//GEN-LAST:event_lblProductosMouseClicked
+
+    private void lblCategoriasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCategoriasMouseClicked
+              frmAgregarCategoria Categoria = new frmAgregarCategoria();
+        Categoria.setVisible(true);
+    }//GEN-LAST:event_lblCategoriasMouseClicked
 
     /**
      * @param args the command line arguments
