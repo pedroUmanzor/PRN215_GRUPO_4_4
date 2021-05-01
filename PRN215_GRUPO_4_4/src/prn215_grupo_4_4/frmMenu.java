@@ -240,8 +240,7 @@ public class frmMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_lblProductosMouseClicked
 
     private void lblCategoriasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCategoriasMouseClicked
-              frmAgregarCategoria Categoria = new frmAgregarCategoria();
-        Categoria.setVisible(true);
+
     }//GEN-LAST:event_lblCategoriasMouseClicked
 
     /**

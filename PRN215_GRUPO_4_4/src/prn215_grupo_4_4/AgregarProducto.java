@@ -2,7 +2,6 @@
 package prn215_grupo_4_4;
 
 
-import Clases.Categorias;
 import Clases.Cliente;
 import Clases.Persona;
 import Clases.Producto;
@@ -20,9 +19,14 @@ public class AgregarProducto extends javax.swing.JFrame {
         initComponents();
         //PONER LA VENTANA EN MEDIO DE LA PANTALLA
         this.setLocationRelativeTo(null);
-                //LLenar combobox
+        //LLenar combobox de Estado
         jCBEstado.addItem("Disponible");
         jCBEstado.addItem("Vendido");
+        //Llenar combo de categorias.
+        jCBCategorias.addItem("electrodomesticos");
+        jCBCategorias.addItem("Isntrumentos musicales");
+        jCBCategorias.addItem("Telefonos");
+        jCBCategorias.addItem("Vehiculos");
     }
   
 
@@ -359,6 +363,7 @@ public class AgregarProducto extends javax.swing.JFrame {
             producto.setCaracteristicas(String.valueOf(jTACaracteristicas.getText()));
             producto.setCosto(Float.valueOf(jTCosto.getText()));
             producto.setEstado(String.valueOf(jCBEstado.getSelectedItem()));
+            producto.setCategoria(String.valueOf(jCBCategorias.getSelectedItem()));
             producto.setPrecioVenta(Float.valueOf(jTPrecioVenta.getText()));
             //VALIDAMOS QUE EL COSTO Y EL PRECIO VENTA SEAN POSITIVOS
             if (producto.getCosto()<=0 || producto.getPrecioVenta()<=0) {

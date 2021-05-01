@@ -10,16 +10,7 @@ public class Producto {
     private String modelo;
     private String numeroSerie;
     private String caracteristicas;
-    //AQUI IRA UNA VARIABLE DE TIPO CATEGORIA
-    public Categorias NC;
-
-    public Categorias getNC() {
-        return NC;
-    }
-
-    public void setNC(Categorias NC) {
-        this.NC = NC;
-    }
+    private String Categoria;
     private float costo;
     private String estado;
     private float precioVenta;
@@ -99,5 +90,15 @@ public class Producto {
     public void setPrecioVenta(float precioVenta) {
         this.precioVenta = precioVenta;
     }
+    
+    
+    public String getCategoria() {
+        return Categoria;
+    }
+
+    public void setCategoria(String Categoria) {
+        this.Categoria = Categoria;
+    }
+
 
 }

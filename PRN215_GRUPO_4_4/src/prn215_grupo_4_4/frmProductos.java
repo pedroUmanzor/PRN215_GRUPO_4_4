@@ -43,6 +43,7 @@ public class frmProductos extends javax.swing.JFrame {
             modelo.setValueAt(a.getModelo(),contador,3);
             modelo.setValueAt(a.getNumeroSerie(),contador,4);
             modelo.setValueAt(a.getCaracteristicas(),contador,5);
+            modelo.setValueAt(a.getCategoria(),contador,6);
             modelo.setValueAt(a.getCosto(),contador,7);
             modelo.setValueAt(a.getEstado(),contador,8);
             modelo.setValueAt(a.getPrecioVenta(),contador,9);
